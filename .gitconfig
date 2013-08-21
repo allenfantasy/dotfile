@@ -1,0 +1,18 @@
+[user]
+	name = Allen Wu
+	email = allenwu1018@gmail.com
+[core]
+	editor = vim
+[alias]
+	ci = commit -v
+	co = checkout
+	st = status
+	br = branch
+	throw = reset --hard HEAD
+	throwh = reset --hard HEAD^
+[color]
+	ui = true
+[push]
+	default = current
+[merge]
+	tool = meld
