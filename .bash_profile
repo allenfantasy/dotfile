@@ -77,11 +77,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
 # mysql aliases
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -109,8 +104,6 @@ DYLD_LIBRARY_PATH="/usr/local/mysql/lib"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && \
 . "$HOME/.rvm/scripts/rvm"
 
-# Run ElasticSearch
-alias es='elasticsearch'
 
 # Custom Alias
 alias llm='ll | more'
@@ -118,3 +111,11 @@ alias cl='clear'
 alias lp='ls -p'
 alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
 #alias rtree = 'tree -L 2 -d'
+alias es='elasticsearch' # Run ElasticSearch
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+export SENCHA_CMD_3_0_0="/Users/wuzeqiu/.sencha/bin/Sencha/Cmd/4.0.2.67"
+
+export PATH=/Users/wuzeqiu/.sencha/bin/Sencha/Cmd/4.0.2.67:$PATH
