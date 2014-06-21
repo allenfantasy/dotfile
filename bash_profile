@@ -116,6 +116,12 @@ alias es='elasticsearch' # Run ElasticSearch
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-export SENCHA_CMD_3_0_0="/Users/wuzeqiu/.sencha/bin/Sencha/Cmd/4.0.2.67"
+export SENCHA_CMD_3_0_0="/Users/allen/.sencha-4.0.2/Sencha/Cmd/4.0.2.67"
 
 export PATH=/Users/wuzeqiu/.sencha/bin/Sencha/Cmd/4.0.2.67:$PATH
+
+export PATH=/Users/allen/.sencha/bin/Sencha/Cmd/4.0.2.67:$PATH
+
+export PATH=/Users/allen/.sencha/Sencha/Cmd/3.1.1.274:$PATH
+
+export PATH=/Users/allen/.sencha-4.0.2/Sencha/Cmd/4.0.2.67:$PATH

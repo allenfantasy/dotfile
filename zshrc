@@ -54,7 +54,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/Users/allen/.sencha-4.0.2/Sencha/Cmd/4.0.2.67:/Users/allen/.sencha/Sencha/Cmd/3.1.1.274:/Users/allen/.sencha/bin/Sencha/Cmd/4.0.2.67:/Users/wuzeqiu/.sencha/bin/Sencha/Cmd/4.0.2.67:/usr/local/heroku/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/allen/.rvm/bin:/usr/local/mysql/bin:/usr/local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -84,3 +83,4 @@ export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 # node
 source ~/Code/tools/nvm/nvm.sh
 export NVM_NODEJS_ORG_MIRROR=http://dist.u.qiniudn.com
+export PATH="./node_modules/.bin:$PATH"
