@@ -84,3 +84,14 @@ export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 source ~/Code/tools/nvm/nvm.sh
 export NVM_NODEJS_ORG_MIRROR=http://dist.u.qiniudn.com
 export PATH="./node_modules/.bin:$PATH"
+export PATH="$HOME/.nvm/bin:$PATH"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+. ~/Code/fun/z/z.sh
+
+### MTR
+export PATH="/usr/local/Cellar/mtr/0.85/sbin/:$PATH"
+
+alias mongod=mongod --config /usr/local/etc/mongod.conf
+alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
