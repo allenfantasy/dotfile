@@ -125,3 +125,6 @@ export PATH=/Users/allen/.sencha/bin/Sencha/Cmd/4.0.2.67:$PATH
 export PATH=/Users/allen/.sencha/Sencha/Cmd/3.1.1.274:$PATH
 
 export PATH=/Users/allen/.sencha-4.0.2/Sencha/Cmd/4.0.2.67:$PATH
+
+export NVM_DIR="/Users/allen/Code/tools/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
