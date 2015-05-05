@@ -107,6 +107,7 @@ DYLD_LIBRARY_PATH="/usr/local/mysql/lib"
 
 # Custom Alias
 alias llm='ll | more'
+alias l='ls -l'
 alias la='ls -la'
 alias cl='clear'
 alias lp='ls -p'
