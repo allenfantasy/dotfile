@@ -1,6 +1,8 @@
 DOTFILE_PATH=`pwd`
-mv ~/.bash_profile ~/.bash_profile.old
-ln -s "$DOTFILE_PATH/bash_profile" ~/.bash_profile
+[ -e "$HOME/.bash_profile" ] && mv $HOME/.bash_profile $HOME/.bash_profile.old
+ln -s "$DOTFILE_PATH/bash_profile" $HOME/.bash_profile
 
-ln -s "$DOTFILE_PATH/gemrc" ~/.gemrc
-ln -s "$DOTFILE_PATH/gitconfig" ~/.gitconfig
+ln -s "$DOTFILE_PATH/gemrc" $HOME/.gemrc
+ln -s "$DOTFILE_PATH/gitconfig" $HOME/.gitconfig
+
+# TODO: add zshrc
