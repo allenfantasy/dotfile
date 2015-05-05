@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="allen"
+ZSH_THEME="fishy"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -83,16 +83,17 @@ export PATH="/Applications/Postgres.app/Contents/MacOS:$PATH"
 export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 
 # node
-source ~/Code/tools/nvm/nvm.sh
-#export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/dist
-export PATH="./node_modules/.bin:$PATH"
-export PATH="$HOME/.nvm/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export NODE_PATH=$NODE_PATH:/Users/allen/.nvm/lib/node_modules
+export PATH="./node_modules/.bin:$PATH"
+export PATH="$NVM_DIR/bin:$PATH"
+
+export NODE_PATH=$NODE_PATH:$NVM_PATH/lib/node_modules
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-. ~/Code/playground/z/z.sh
+[ -e "$HOME/Code/playground/z/z.sh" ] && . $HOME/Code/playground/z/z.sh
 
 ### MTR
 export PATH="/usr/local/Cellar/mtr/0.85/sbin/:$PATH"
@@ -102,7 +103,7 @@ alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 
 ### Docker
 export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/allen/.boot2docker/certs/boot2docker-vm
+export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 
 ### Android environment
@@ -111,14 +112,14 @@ export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/buil
 
 alias atom=/Applications/Atom.app/Contents/MacOS/Atom
 
-alias lines=~/.scripts/lines
+alias lines=$HOME/.scripts/lines
 
 ### java
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.7.0_71)
-export PATH="$PATH:$JAVA_HOME/bin"
+#export JAVA_HOME=$(/usr/libexec/java_home -v 1.7.0_71)
+#export PATH="$PATH:$JAVA_HOME/bin"
 
 ### Play! Framework
-export PLAY_PATH=~/.play
+export PLAY_PATH=$HOME/.play
 export PATH="$PLAY_PATH:$PATH"
 
 ### Vim
