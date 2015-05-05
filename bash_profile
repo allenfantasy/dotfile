@@ -107,6 +107,7 @@ DYLD_LIBRARY_PATH="/usr/local/mysql/lib"
 
 # Custom Alias
 alias llm='ll | more'
+alias la='ls -la'
 alias cl='clear'
 alias lp='ls -p'
 alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
@@ -116,15 +117,5 @@ alias es='elasticsearch' # Run ElasticSearch
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-export SENCHA_CMD_3_0_0="/Users/allen/.sencha-4.0.2/Sencha/Cmd/4.0.2.67"
-
-export PATH=/Users/wuzeqiu/.sencha/bin/Sencha/Cmd/4.0.2.67:$PATH
-
-export PATH=/Users/allen/.sencha/bin/Sencha/Cmd/4.0.2.67:$PATH
-
-export PATH=/Users/allen/.sencha/Sencha/Cmd/3.1.1.274:$PATH
-
-export PATH=/Users/allen/.sencha-4.0.2/Sencha/Cmd/4.0.2.67:$PATH
-
-export NVM_DIR="/Users/allen/Code/tools/nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
