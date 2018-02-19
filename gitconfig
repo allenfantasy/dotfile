@@ -3,6 +3,10 @@
 	email = allenwu1018@gmail.com
 [core]
 	editor = vim
+  quotepath = false
+	excludesfile = /Users/allenwu/.gitignore_global
+	autocrlf = false
+	pager = less -x4
 [alias]
 	ci = commit -v
 	co = checkout
@@ -18,3 +22,9 @@
 	tool = meld
 [http]
 	postBuffer = 524288000
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

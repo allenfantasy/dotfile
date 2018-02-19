@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+MAILCHECK=0
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -74,15 +76,13 @@ source $ZSH/oh-my-zsh.sh
 
 # git
 export PATH="/usr/local/bin:/usr/bin:$PATH"
-# rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-export PATH="$PATH:$HOME/.rvm/bin" # add RVM to PATH for scripting
 
 # postgres
 export PATH="/Applications/Postgres.app/Contents/MacOS:$PATH"
 export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 
 # node
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/dist
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
@@ -96,15 +96,15 @@ export PATH="/usr/local/heroku/bin:$PATH"
 [ -e "$HOME/Code/playground/z/z.sh" ] && . $HOME/Code/playground/z/z.sh
 
 ### MTR
-export PATH="/usr/local/Cellar/mtr/0.85/sbin/:$PATH"
+export PATH="/usr/local/Cellar/mtr/0.85/sbin:$PATH"
 
 alias mongod=mongod --config /usr/local/etc/mongod.conf
 alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 
 ### Docker
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
+#export DOCKER_HOST=tcp://192.168.59.103:2376
+#export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
+#export DOCKER_TLS_VERIFY=1
 
 ### Android environment
 export ANDROID_HOME=~/android-sdks
@@ -123,5 +123,39 @@ export PLAY_PATH=$HOME/.play
 export PATH="$PLAY_PATH:$PATH"
 
 ### Vim
-alias vi=vim
+#alias vi=vim
 
+### simple http server
+alias simpleserver="ruby -run -e httpd -- -p 5000 ."
+
+### pyenv
+eval "$(pyenv init -)"
+
+### qiniu devtools
+export PATH="$HOME/code/tools/qiniu-devtools:$PATH"
+
+### Brew PHP
+export PATH="$(brew --prefix php56)/bin:$PATH"
+export PATH="$(brew --prefix php56)/sbin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
+### Colorsvn
+alias svn=colorsvn
+export NODE_PATH=:/Users/allenwu/.nvm/versions/node/v0.12.4/lib/node/lib/node_modules:/Users/allenwu/.nvm/versions/node/v0.12.4/lib/node_modules
+
+### rvm
+export PATH="$GEM_HOME/bin:$HOME/.rvm/bin:$PATH" # add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+### Autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+### Composer
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+PHP_AUTOCONF=/usr/local/bin/autoconf
+source /usr/local/opt/autoenv/activate.sh
+eval $(thefuck --alias)
+
+export EDITOR=vim
+alias crontab="VIM_CRONTAB=true crontab"
